@@ -47,12 +47,12 @@ grid-column: 3 / 5 ;
 
 .contentContainer {
     border-style: inset;
-    border-radius: 2%;
+    border-radius: 5px;
     background: rgba(40, 0, 66, 0.6);
     border-color: #495392;
-    border-width: 20%;
+    border-width: 5px;
     overflow-y: scroll;
     z-index: 1;
-    margin-left: 5%;
-    margin-bottom: 5%;
+    margin-left: 10px;
+    margin-bottom: 10px;
 }
