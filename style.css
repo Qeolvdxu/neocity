@@ -1,5 +1,5 @@
 
-body, html {
+body {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -47,11 +47,12 @@ grid-column: 3 / 5 ;
 
 .contentContainer {
     border-style: inset;
-    border-radius: 5px;
-    background-color: #14141433;
+    border-radius: 2%;
+    background: rgba(40, 0, 66, 0.6);
     border-color: #495392;
-    border-width: 7px;
+    border-width: 20%;
     overflow-y: scroll;
     z-index: 1;
-    margin-left: 12px;
+    margin-left: 5%;
+    margin-bottom: 5%;
 }
