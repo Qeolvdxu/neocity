@@ -157,6 +157,7 @@ body {
     border-color: var(--blue);
     border-width: 5px;
     overflow-y: scroll;
+    overflow-x: scroll;
     z-index: 1;
     margin-left: 10px;
     margin-bottom: 10px;
