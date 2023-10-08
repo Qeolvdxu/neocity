@@ -121,6 +121,7 @@ body {
     background-image: url('stars3.gif');
     background-repeat: repeat;
     background-size: auto;
+    background-attachment: fixed;
 }
 
 .grid-container {
@@ -141,6 +142,27 @@ body {
     color: var(--text);
     grid-column: 3 / 7;
     margin: auto;
+}
+
+.marquee {
+    width: 450px;
+    background-color: red;
+    color:wheat;
+	line-height: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.marquee-body  {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 15s linear infinite;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 .leftbar {
