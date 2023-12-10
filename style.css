@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+* {
+    box-sizing:border-box;
+}
+
 @font-face {
     font-family: bigPixel;
     src: url(ADDSBP__.TTF);
@@ -8,17 +12,6 @@
 @font-face {
     font-family: smallPixel;
     src: url(ambitsek.ttf);
-}
-
-img { 
-    image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
-    image-rendering: -moz-crisp-edges;          /* Firefox                        */
-    image-rendering: -o-crisp-edges;            /* Opera                          */
-    image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
-    image-rendering: pixelated;                 /* Universal support since 2021   */
-    image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
-    -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
-
 }
 
 h2 {
@@ -120,8 +113,8 @@ body {
     color: var(--text);
     background-image: url('stars3.gif');
     background-repeat: repeat;
-    background-size: auto;
     background-attachment: fixed;
+    background-size: auto;
 }
 
 .grid-container {
@@ -144,33 +137,13 @@ body {
     margin: auto;
 }
 
-.marquee {
-    width: 450px;
-    background-color: red;
-    color:wheat;
-	line-height: 50px;
-    white-space: nowrap;
-    overflow: hidden;
-    box-sizing: border-box;
-}
-.marquee-body  {
-    display: inline-block;
-    padding-left: 100%;
-    animation: marquee 15s linear infinite;
-}
-
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
 .leftbar {
     grid-column: 2 / 3;
 }
 
 .mainbar {
     grid-column: 3 / 7;
+    min-width: 50%;
 }
 
 .rightbar {
@@ -194,4 +167,36 @@ body {
     z-index: 1;
     margin-left: 10px;
     margin-bottom: 10px;
+    min-width: 50%;
+}
+
+
+/* hides the feed title */
+p.rss-title {
+    display:none;
+}
+
+li.rss-item {
+    list-style-type:none;   /* this removes the bullet points */
+    margin-bottom:20px; /* adds spacing under entry content */
+}
+
+/* this styles the blog title link */
+li.rss-item a {
+    font-weight:bold;
+    font-size:20px;
+    text-decoration:none; /* removes underline */
+}
+
+/* this styles the date */
+.rss-date {
+    display:inline-block; /* need this to add padding around each number */
+    padding-top:10px;
+    padding-bottom:10px;
+    font-style:italic;
+}
+
+/* hides the weird # of comments (displayed as 0 in demo) */
+a.rss-item:last-child {
+    display:none;
 }
