@@ -124,6 +124,7 @@ body {
     min-height: 100vh;
 }
 
+
 .header,
 .sidebar,
 .contentContainer,
@@ -134,7 +135,7 @@ body {
 .header {
     color: var(--text);
     grid-column: 3 / 7;
-    margin: auto;
+
 }
 
 .leftbar {
@@ -143,7 +144,6 @@ body {
 
 .mainbar {
     grid-column: 3 / 7;
-    min-width: 50%;
 }
 
 .rightbar {
@@ -167,7 +167,7 @@ body {
     z-index: 1;
     margin-left: 10px;
     margin-bottom: 10px;
-    min-width: 50%;
+
 }
 
 .blink_text
@@ -227,4 +227,27 @@ li.rss-item a {
 /* hides the weird # of comments (displayed as 0 in demo) */
 a.rss-item:last-child {
     display:none;
+}
+
+/* Add this CSS inside your style.css file or your CSS section */
+
+@media screen and (max-width: 767px) {
+    /* Adjust grid layout for smaller screens */
+    .grid-container {
+    display: grid;
+      grid-template-columns: 1fr; /* Change to a single column for mobile */
+    }
+
+    /* Modify specific elements within the smaller screen */
+    .header,
+    .leftbar,
+    .rightbar,
+    .footer {
+      grid-column: auto; /* Reset grid-column to auto for these elements */
+    }
+
+    .mainbar {
+      grid-column: auto; /* Reset grid-column to auto for the main content */
+      padding: 20px; /* Add padding to the main content for better readability */
+    }
 }
